@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   20:04:56 02/16/2022
+// Create Date:   
 // Design Name:   gcd_datapath
-// Module Name:   C:/PROJECT/gcd/GCD_test.v
+// Module Name:   
 // Project Name:  gcd
 // Target Device:  
 // Tool versions:  
