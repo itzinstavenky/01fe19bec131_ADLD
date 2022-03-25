@@ -7,7 +7,7 @@ module parking_system(
  output reg [6:0] HEX_1, HEX_2
     );
  parameter IDLE = 3'b000, WAIT_PASSWORD = 3'b001, WRONG_PASS = 3'b010, RIGHT_PASS = 3'b011,STOP = 3'b100;
- // Moore FSM : output just depends on the current state
+ // Moore FSM 
  reg[2:0] current_state, next_state;
  reg[31:0] counter_wait;
  reg red_tmp,green_tmp;
@@ -30,7 +30,7 @@ module parking_system(
  counter_wait <= 0;
  end
  // change state
-// fpga4student.com FPGA projects, Verilog projects, VHDL projects
+
  always @(*)
  begin
  case(current_state)
