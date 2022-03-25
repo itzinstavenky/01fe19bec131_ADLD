@@ -25,29 +25,29 @@
 module seque_detect_test;
 
 	// Inputs
-	reg clk;
-	reg rst;
-	reg in;
+	reg clock;
+	reg reset;
+	reg sequence_in;
 	// Outputs
-	wire out;
+	wire detector_out;
 
 	// Instantiate the Unit Under Test (UUT)
 	seque_detect uut (
-		.clk(clk), 
-		.rst(rst), 
-		.in(in), 
-		.out(out)
+		.clock(clock), 
+		.reset(reset), 
+		.sequence_in(sequence_in), 
+		.detector_out(detector_out)
 	);
 
 	initial begin
 		// Initialize Inputs
-		clk = 0;
-		rst = 0;
-		in = 0;
+		clock = 0;
+		reset = 0;
+		sequence_in = 0;
 
-		#10 rst=0; #20 rst =1;
-		#20 in=111011011;
-		#40 in=1011011011;
+		#10 reset=0; #20 reset =1;
+		#20 sequence_in=111011011;
+		#40 sequence_in=1011011011;
         
 		// Add stimulus here
 
