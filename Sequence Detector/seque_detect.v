@@ -18,11 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module seque_detect(clk,rst,in,out);
-	 input clk;
-    input rst;
-    input in;
-    output reg out;
+module seque_detect(clock,reset,sequence_in,detector_out);
+	 input clock;
+    input reset;
+    input sequence_in;
+    output reg detector_out;
 	 parameter zero=3'b000,
 					one=3'b001,
 					two=3'b011,
@@ -30,15 +30,15 @@ module seque_detect(clk,rst,in,out);
 					four=3'b110;
 	reg [2:0] cur_state,next_state;
 	
-	always @(posedge clk,posedge rst)
+	always @(posedge clock,posedge reset)
 	begin
-	if(rst==1)
+		if(reset==1)
 	 cur_state<=zero;
 	 else
 	 cur_state<=next_state;
 	end
 	
-	always @(cur_state,in)
+	always @(cur_state,sequence_in)
 	begin
 	case(cur_state)
 	zero:
