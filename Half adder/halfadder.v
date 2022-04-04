@@ -1,17 +1,17 @@
 module half_adder 
   (
-   i_bit1,
-   i_bit2,
-   o_sum,
-   o_carry
+   a,
+   b,
+   osum,
+   carry
    );
  
-  input  i_bit1;
-  input  i_bit2;
-  output o_sum;
-  output o_carry;
+  input  a;
+  input  b;
+  output sum;
+  output carry;
  
-  assign o_sum   = i_bit1 ^ i_bit2;  // bitwise xor
-  assign o_carry = i_bit1 & i_bit2;  // bitwise and
+  assign sum   = a ^ b; // bitwise xor
+  assign carry = a & b;  // bitwise and
  
 endmodule
