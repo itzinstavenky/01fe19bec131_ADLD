@@ -1,0 +1,3 @@
+# Full Adder 
+Two half adder circuits added together with a OR gate. The first half adder circuit is on the left side, we give two single bit binary inputs A and B.
+it will produce two outputs, SUM and Carry out. First half adder circuit’s SUM output is further provided to the second half adder circuit’s input. We provided the carry in bit across the other input of second half order circuit. Again it will provide SUM out and Carry out bit. This SUM output is the final output of the Full adder circuit. On the other hand the Carry out of First half adder circuit and the Carry out of second adder circuit is further provided into OR logic gate. After logic OR of two Carry output, we get the final carry out of full adder circuit.
