@@ -1,0 +1,3 @@
+# AND gate :
+
+An AND gate is a digital logic gate with two or more inputs and one output that performs logical conjunction. The output of an AND gate is true only when all of the inputs are true. If one or more of an AND gate's inputs are false, then the output of the AND gate is false. here input 1 is referred to as true and input 0 is referred to as false. here in this project two input AND gate is written using verilog in ISE Xilinx. The Output of AND operation is C and C is equal to A.B
