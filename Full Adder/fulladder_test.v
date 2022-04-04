@@ -1,21 +1,46 @@
-module ha_tb();
-reg a,b,cin;
-wire sum,cout;
-fa DUT(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
-initial begin
-$monitor("a =%b b =%b sum =%b cin =%b cout =%b ",a,b,sum,cin,cout);
-
-a=0;
-b=1;
-cin=1;
-#5
-a=1;
-b=0;
-cin=1;
-#5
-a=1;
-b=1;
-cin=1;
-
-end
-endmodule
+module adder();
+ reg A,B,Cin;
+ wire S,Cout;   
+ adder(
+    .X1(A),
+    .X2(B),
+    .Cin(Cin),
+    .S(S),
+    .Cout(Cout) 
+   );
+ initial begin
+   A = 0;
+   B = 0;
+   Cin = 0;
+   #5;
+   A = 0;
+   B = 0;
+   Cin = 1;
+   #5;  
+   A = 0;
+   B = 1;
+   Cin = 0;
+   #5;
+   A = 0;
+   B = 1;
+   Cin = 1;
+   #5;
+   A = 1;
+   B = 0;
+   Cin = 0;
+   #5;
+   A = 1;
+   B = 0;
+   Cin = 1;
+   #5;
+   A = 1;
+   B = 1;
+   Cin = 0;
+   #5;  
+   A = 1;
+   B = 1;
+   Cin = 1;
+   #5;  
+  end
+      
+endmodule 
